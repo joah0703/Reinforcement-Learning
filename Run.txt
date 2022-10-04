@@ -1,0 +1,8 @@
+[2021.06.30]
+<week_wholesale>
+
+* 모델 학습 * 484개
+>>python main.py --stock_code week_wholesale --ver v1 --rl_method a3c --net lstm --num_steps 1 --num_epoches 1000 --start_epsilon 1 --delayed_reward_threshold 0.1 --lr 0.0001 --learning --start_date 20110101 --end_date 20191231
+
+* 모델 활용 * 246개
+>>python main.py --stock_code week_wholesale --ver v1 --rl_method a3c --net lstm --num_steps 1 --num_epoches 1 --start_epsilon 0 --delayed_reward_threshold 0.1 --lr 0.0001 --value_network_name a3c_lstm_value_20210712180519 --policy_network_name a3c_lstm_policy_20210712180519 --start_date 20200101 --end_date 20201231
